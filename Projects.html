@@ -5,7 +5,7 @@
 	<!-- meta tags -->
 	<meta charset=UTF-8 "/>
 	<meta http-equiv="X-UA-Compatible " content="IE=edge ">
-	<meta name="viewport " content="width=device-width, initial-scale=1, shrink-to-fit=no ">
+	<meta name="viewport " content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no ">
 	<meta http-equiv="x-ua-compatible " content="ie=edge ">
 	<!-- boostrap -->
 	<link rel="stylesheet " href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css ">
@@ -13,12 +13,18 @@
 	<link rel="stylesheet " href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 	<!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css " rel="stylesheet ">
+		<link href="css/mdb.min.css " rel="stylesheet ">
+	<!-- mapbox -->
+	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js"></script>
+	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css" rel="stylesheet " />
+
 	<!-- my css -->
 	<link rel="stylesheet " href="css/mycss.css ">
 	<link href="css/style.min.css " rel="stylesheet ">
 	<title>James Carney</title>
 	<meta name="keywords " content="portfolio"/>
+
+
 </head>
 
 <body>
@@ -54,9 +60,9 @@
 		<!-- JUMBOTRON -->
 			<section class="jumbotron-fluid text-center bg-secondary py-4 wow slideInDown z-depth-1 " >
 				<div class="container ">
-					<h1 class="jumbotron-heading mb-1 ">Projects</h1>
-					<div class="figure-img "><i class="fas fa-map fa-3x"></i></div>
-					<p class="lead text ">As a student and developing professional, my portfolio is still growing.
+					<h1 class="jumbotron-heading mb-1 text-white">Projects</h1>
+					<div class="figure-img " style="color:white"><i class="fas fa-map fa-3x "></i></div>
+					<p class="lead text text-white">As a student and developing professional, my portfolio is still growing.
 						These projects highlight some of my recent work.
 					</p>
 				</div>
@@ -119,6 +125,24 @@
 							<div class="flex-center p-2">	
 									<a role="button" class="btn btn-blue-grey btn-sm " href="assets/DRVCollector.pdf">Report PDF</a>
 									<a role="button" class="btn btn-blue-grey btn-sm " href="https://www.youtube.com/watch?v=-AZ6EIHX9GA&feature=youtu.be">Video</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-4">
+						<div class="card mb-4 shadow hoverable ">
+							<div class="view overlay">
+								<img class="card-img-top p-2" src="assets/westernthumb.png " alt="Card image placeholder ">				
+								<a href="#!" data-toggle="modal" data-target="#Modal4"><div class="mask rgba-white-strong text-dark">
+									<p class="card-text flex-center"><i class="fa fa-search fa-3x " aria-hidden="true "></i></p>
+								</div></a>
+							</div>
+							<div class="card-body mb-0 pb-0">
+								<h6 class="card-title ">Western Style</h6>
+								<p class="card-text ">A custom Mapbox theme inspired by Western movies and maps of the mid-1800's.</p>
+							</div>
+							<div class="flex-center p-2">	
+									<a role="button" class="btn btn-blue-grey btn-sm " href="https://api.mapbox.com/styles/v1/jhcarney/cjg9ol5r10u2q2rrtuwdgeh40.html?fresh=true&title=true&access_token=pk.eyJ1IjoiamhjYXJuZXkiLCJhIjoiY2pmbHE2ZTVlMDJnbTJybzdxNTNjaWsyMiJ9.hoiyrXTX3pOuEExAnhUtIQ#3.3/41.413933/-96.878242/0">Full Size</a>
 							</div>
 						</div>
 					</div>
@@ -188,7 +212,30 @@
 								</div>
 					</div>
 				</div>
-			</div><!-- Modal 3--><!-- CARD MODALS -->
+			</div><!-- Modal 3-->
+			
+			<!-- Modal 4-->
+			<div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="Modal4Label" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+					<div class="modal-content">	
+						
+							<div class="modal-body" style="height: calc(100vh - 100px); overflow-y: auto;">
+								<div class="mapwindow1" id="map" style=" height:100%; width:100%"></div>
+								<script>
+									mapboxgl.accessToken = "pk.eyJ1IjoiamhjYXJuZXkiLCJhIjoiY2pmbHE2ZTVlMDJnbTJybzdxNTNjaWsyMiJ9.hoiyrXTX3pOuEExAnhUtIQ";
+									var map = new mapboxgl.Map({
+										container: "map",
+										style: "mapbox://styles/jhcarney/cjg9ol5r10u2q2rrtuwdgeh40",
+									})
+									map.addControl(new mapboxgl.NavigationControl());
+								</script>
+							</div>
+									
+					</div>
+				</div>
+			</div><!-- Modal 4-->
+	
+			<!-- CARD MODALS -->
 
 	</main><!-- MAIN -->
 
@@ -232,6 +279,15 @@
 		new WOW().init();
 		</script>
 	
+
+	<script>
+		$(document).on('shown.bs.modal','#Modal4', function () {
+			window.dispatchEvent(new Event('resize'));
+		})
+	</script>
+
+
+
 	<!-- SETUP -->
 	
 </body>

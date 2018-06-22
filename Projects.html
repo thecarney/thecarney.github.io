@@ -3,7 +3,7 @@
 
 <head>
 	<!-- meta tags -->
-	<meta charset=UTF-8 "/>
+	<meta charset="UTF-8"/>
 	<meta http-equiv="X-UA-Compatible " content="IE=edge ">
 	<meta name="viewport " content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no ">
 	<meta http-equiv="x-ua-compatible " content="ie=edge ">
@@ -24,6 +24,14 @@
 	<title>James Carney</title>
 	<meta name="keywords " content="portfolio"/>
 
+    <!-- favicon stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -132,7 +140,7 @@
 					<div class="col-md-6 col-lg-4">
 						<div class="card mb-4 shadow hoverable ">
 							<div class="view overlay">
-								<img class="card-img-top p-2" src="assets/westernthumb.png " alt="Card image placeholder ">				
+								<img class="card-img-top p-2" src="assets/westernthumb.png " alt="Card image placeholder ">
 								<a href="#!" data-toggle="modal" data-target="#Modal4"><div class="mask rgba-white-strong text-dark">
 									<p class="card-text flex-center"><i class="fa fa-search fa-3x " aria-hidden="true "></i></p>
 								</div></a>
@@ -141,11 +149,29 @@
 								<h6 class="card-title ">Western Style</h6>
 								<p class="card-text ">A custom Mapbox theme inspired by Western movies and maps of the mid-1800's.</p>
 							</div>
-							<div class="flex-center p-2">	
+							<div class="flex-center p-2">
 									<a role="button" class="btn btn-blue-grey btn-sm " href="https://api.mapbox.com/styles/v1/jhcarney/cjg9ol5r10u2q2rrtuwdgeh40.html?fresh=true&title=true&access_token=pk.eyJ1IjoiamhjYXJuZXkiLCJhIjoiY2pmbHE2ZTVlMDJnbTJybzdxNTNjaWsyMiJ9.hoiyrXTX3pOuEExAnhUtIQ#3.3/41.413933/-96.878242/0">Full Size</a>
 							</div>
 						</div>
 					</div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card mb-4 shadow hoverable ">
+                            <div class="view overlay">
+                                <img class="card-img-top p-2" src="assets/G575Lab1Thumb.PNG" alt="Card image placeholder ">
+                                <a href="#!" data-toggle="modal" data-target="#Modal5"><div class="mask rgba-white-strong text-dark">
+                                    <p class="card-text flex-center"><i class="fa fa-search fa-3x " aria-hidden="true "></i></p>
+                                </div></a>
+                            </div>
+                            <div class="card-body mb-0 pb-0">
+                                <h6 class="card-title ">Alaska Flood History</h6>
+                                <p class="card-text ">A prototype web app for exploring flood history in Alaska using Leaflet, JavaScript, and JQuery.</p>
+                            </div>
+                            <div class="flex-center p-2">
+                                <a role="button" class="btn btn-blue-grey btn-sm " href="http://thecarney.github.io/G575Lab1/">Launch the Map</a>
+                            </div>
+                        </div>
+                    </div>
 
 				</div>		
 			</div><!-- CARDS CONTAINER -->
@@ -234,7 +260,30 @@
 					</div>
 				</div>
 			</div><!-- Modal 4-->
-	
+
+        <!-- Modal 5-->
+        <div class="modal fade" id="Modal5" tabindex="-1" role="dialog" aria-labelledby="Modal5Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="Modal5Label"><strong>Prototyping Custom Map Interactions</strong></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="modal-content modal-backdrop" src="assets/G575Lab1Full.png"  alt="G575Lab1">
+                    </div>
+                    <div class="modal-footer flex-center p-0">
+                        <a role="button" class="btn btn-mdb-color " href="http://thecarney.github.io/G575Lab1/">Launch the Map</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Modal 5-->
+
+
+
+
 			<!-- CARD MODALS -->
 
 	</main><!-- MAIN -->
